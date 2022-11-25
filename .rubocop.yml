@@ -11,6 +11,8 @@ AllCops:
     - "test/**/*"
     - "spec/spec_helper.rb"
     - "spec/rails_helper.rb"
+    - "app/mailers/application_mailer.rb"
+    - "config.ru"
 
   DisplayCopNames: true
 
