@@ -4,7 +4,6 @@ class CreateComments < ActiveRecord::Migration[7.0]
       t.belongs_to :user, foreign_key: true
       t.belongs_to :post, foreign_key: true
       t.text :article
-
       t.timestamps
     end
   end
