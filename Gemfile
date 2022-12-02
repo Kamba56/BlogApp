@@ -55,6 +55,8 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem 'rails-controller-testing'
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
