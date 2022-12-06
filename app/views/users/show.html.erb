@@ -1,2 +1,14 @@
-<h1>Users#show</h1>
-<p>Displays specific user</p>
+<main class="grid pad">
+  <%= render "shared/profile", user: @user %>
+
+  <section class="grid-item pad">
+    <div class="pad center-align">
+      <h2 class="margin-bottom">Bio</h2>
+      <p><%= @user.bio %></p>
+    </div>
+  </section>
+  <% @user.recent_posts.each do |post| %>
+    <%= render "shared/post_list", post: post %>
+  <% end %>
+  <a href="<%= user_posts_path(@user) %>" class="btn pad">See all posts</a>
+</main>

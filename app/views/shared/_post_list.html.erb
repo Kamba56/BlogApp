@@ -1,0 +1,12 @@
+<a href="<%= user_post_path(post) %>">
+  <section class="grid-item pad">
+    <div class="pad center-align">
+      <h2 class="margin-bottom"><%= post.title %></h2>
+      <p><%= post.article %></p>
+    </div>
+    <div class="right-align">
+      <span>No of likes: <%= post.likes_counter %></span>
+      <span>No of comments: <%= post.comments_counter %></span>
+    </div>
+  </section>
+</a>
