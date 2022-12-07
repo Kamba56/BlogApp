@@ -1,2 +1,11 @@
-<h1>Posts#index</h1>
-<p>List all users posts</p>
+<main class="grid pad">
+  <%= render 'shared/profile', user: @user %>
+
+  <% @posts.each do |post| %>
+    <%= render partial: "shared/post_list", locals: {post: post, user: @user} %>
+    <% post.recent_comments.each do |comment| %>
+      <%= render "shared/comment_list", comment: comment%>
+    <% end %>
+  <% end %>
+</main>
+<button class="btn pad">Pagination</button>

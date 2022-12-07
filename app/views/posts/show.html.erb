@@ -1,2 +1,6 @@
-<h1>Posts#show</h1>
-<p>Display a specific user post</p>
+<main class="grid pad">
+  <%= render partial: "shared/post_list", locals: {post: @post, user: @user} %>
+  <% @post.comments.each do |comment| %>
+    <%= render "shared/comment_list", comment: comment%>
+  <% end %>
+</main>

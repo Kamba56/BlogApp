@@ -1,0 +1,14 @@
+<a href="<%= user_path(user) %>" class="anchor grid-item">
+  <section class="flex pad center-align">
+    <div class="user-img">
+      <img src="<%= user.photo %>" alt="User picture">
+    </div>
+
+    <div class="flex pad center-align">
+      <h2 class="big-text">
+        <%= user.name %>
+      </h2>
+      <p class="post-no bottom-align">Number of posts: <%= user.posts_counter %></p>
+    </div>
+  </section>
+</a>
