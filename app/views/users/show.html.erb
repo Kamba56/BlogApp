@@ -8,7 +8,7 @@
     </div>
   </section>
   <% @user.recent_posts.each do |post| %>
-    <%= render "shared/post_list", post: post %>
+    <%= render partial: "shared/post_list", locals: {post: post, user: @user} %>
   <% end %>
   <a href="<%= user_posts_path(@user) %>" class="btn pad">See all posts</a>
 </main>

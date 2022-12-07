@@ -1,5 +1,5 @@
-<a href="<%= user_post_path(post) %>">
-  <section class="grid-item pad">
+<a href="<%= user_post_path(user, post) %>" class="grid-item">
+  <section class="pad">
     <div class="pad center-align">
       <h2 class="margin-bottom"><%= post.title %></h2>
       <p><%= post.article %></p>
