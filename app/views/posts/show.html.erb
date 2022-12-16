@@ -1,6 +1,14 @@
 <main class="grid pad">
   <%= render partial: "shared/post_list", locals: {post: @post, user: @user} %>
+  <div>
+    <%= form_with url: "/users/#{@post.user_id}/posts/#{@post.id}/likes", scope: :like do |form| %>
+    <%= form.submit "Like " %>
+    <%end%>
+  </div>
+  
   <% @post.comments.each do |comment| %>
     <%= render "shared/comment_list", comment: comment%>
   <% end %>
+
+  <%= render "shared/add_comments", post: @post %>
 </main>
